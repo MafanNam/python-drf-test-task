@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 import environ
 
 env = environ.Env()
@@ -27,7 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # THIRD_PARTY_APPS
     "rest_framework",
-    'rest_framework.authtoken',
+    "rest_framework.authtoken",
     "django_celery_results",
     "django_filters",
     "djcelery_email",
@@ -169,15 +170,10 @@ SPECTACULAR_SETTINGS = {
 }
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        'rest_framework.authentication.TokenAuthentication',
-    ),
+    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework.authentication.TokenAuthentication",),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
-
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
 
 DJOSER = {
     "LOGIN_FIELD": "email",
@@ -192,15 +188,8 @@ DJOSER = {
     "PASSWORD_RESET_CONFIRM_URL": "password-reset/{uid}/{token}",
     "USERNAME_RESET_CONFIRM_URL": "email-reset/{uid}/{token}",
     "ACTIVATION_URL": "activate/{uid}/{token}",
-    # "SERIALIZERS": {
-    #     "user_create_password_retype": "apps.users.api.serializers.CustomUserCreatePasswordRetypeSerializer",
-    #     "user": "apps.users.api.serializers.CustomUserSerializer",
-    #     "current_user": "apps.users.api.serializers.CustomUserSerializer",
-    #     "user_delete": "djoser.serializers.UserDeleteSerializer",
-    # },
     "PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND": True,
     "USERNAME_RESET_SHOW_EMAIL_NOT_FOUND": True,
-    "TOKEN_MODEL": None,
 }
 
 # CACHE

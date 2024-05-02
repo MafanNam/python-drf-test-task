@@ -119,6 +119,7 @@ myenv
 .envs/*
 !.envs/.local/
 .envs/.local/django.env
+.envs/.local/django.docker.env
 
 requirements/*
 !requirements/base.txt
