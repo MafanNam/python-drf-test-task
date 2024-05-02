@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     # LOCAL_APPS
     "apps.users",
+    "apps.events",
 ]
 
 MIDDLEWARE = [
@@ -177,14 +178,8 @@ REST_FRAMEWORK = {
 
 DJOSER = {
     "LOGIN_FIELD": "email",
-    "SET_USERNAME_RETYPE": True,
-    "SET_PASSWORD_RETYPE": True,
     "SEND_ACTIVATION_EMAIL": True,
     "SEND_CONFORMATION_EMAIL": True,
-    "LOGOUT_ON_PASSWORD_CHANGE": False,
-    "USER_CREATE_PASSWORD_RETYPE": True,
-    "USERNAME_CHANGED_EMAIL_CONFIRMATION": True,
-    "PASSWORD_CHANGED_EMAIL_CONFIRMATION": True,
     "PASSWORD_RESET_CONFIRM_URL": "password-reset/{uid}/{token}",
     "USERNAME_RESET_CONFIRM_URL": "email-reset/{uid}/{token}",
     "ACTIVATION_URL": "activate/{uid}/{token}",
@@ -192,13 +187,14 @@ DJOSER = {
     "USERNAME_RESET_SHOW_EMAIL_NOT_FOUND": True,
 }
 
-# CACHE
+# CACHE FOR DEBUG
 # CACHES = {
 #     "default": {
 #         "BACKEND": "django.core.cache.backends.dummy.DummyCache",
 #     }
 # }
 
+# CACHE
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",

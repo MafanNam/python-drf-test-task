@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - makefile and commands.
 - drf base token auth.
 - docker and docker compose (django, redis, celery, flower)
+- Events app create
+- Event model, serializer, views, urls.
+- Organize permission object
+- Events (CRUD)
 
 ### Changed
 
@@ -23,4 +27,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - djoser settings.
-- 
+-
