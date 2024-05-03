@@ -47,3 +47,9 @@ cov-docker:
 
 cov-gen-docker:
 	docker compose -f local.yml run --rm server coverage html
+
+dumpdata:
+	cd backend & python manage.py dumpdata --exclude=auth --exclude=contenttypes --exclude=sessions -o mydata.json
+
+loaddata:
+	cd backend & python manage.py loaddata mydata.json

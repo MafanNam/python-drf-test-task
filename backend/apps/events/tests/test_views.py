@@ -1,11 +1,9 @@
 from django.test import TestCase
-
 from rest_framework.reverse import reverse
 from rest_framework.test import APIClient
 
-from ..models import Event
-
 from ...users.tests.test_models import create_user
+from ..models import Event
 
 EVENT_LIST_CREATE_URL = reverse("events:event-list-create")
 
@@ -108,9 +106,7 @@ class PrivateTestAuthenticationViews(TestCase):
         self.assertEqual(res.status_code, 204)
 
     def test_event_register_user(self):
-        payload = {
-            "event": self.event1.id
-        }
+        payload = {"event": self.event1.id}
 
         # cannot register on own event
         res = self.client.post(event_register_user_url(self.event1.id), payload, format="json")

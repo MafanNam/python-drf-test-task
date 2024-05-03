@@ -1,0 +1,188 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$aEtZbGJEeXhlRjdLWVY0Q3VlYU9SSg$V9Ft4hIIB3Xrq6rWdQEejER+Fejx+ou/88cPXq8Uack",
+      "last_login": "2024-05-03T13:39:38.778Z",
+      "is_superuser": true,
+      "email": "admin@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-05-03T13:39:19.866Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$MlpaY3NkSFJUa1dOa3p0UWFmVWh0Tw$CbJ3wtM5uNgZV4yTTux/1r/tLoX0WGxHX5NPYob/kHY",
+      "last_login": "2024-05-03T13:41:23.663Z",
+      "is_superuser": false,
+      "email": "user1@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-03T13:40:09.143Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$bE54THBFWG5JTWNJZFhaRVNxb3haSg$F26wMesq8WImH7/rRqIAINHliXfodBIigT+XcE4REHg",
+      "last_login": "2024-05-03T13:42:50.906Z",
+      "is_superuser": false,
+      "email": "user2@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-03T13:40:19.214Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$a2hLcWlGa2tWVkhoVWhhN0lXdW05Mg$s2BfMjIgG+UO/G6rT6wiNUw4w7npJYilxxKIC3bUyN0",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "user3@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-03T13:40:24.825Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$UVppMEt4MHoxZmtKZGlxTExic3ZiTw$F6muFKiXMfaTOGXXVj3jMRIj5qBbTUPkoz6X4sErqwk",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "user4@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-03T13:40:29.264Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$TkZTZExZZHc2dTdhQmlidHRRVDVjcg$7v1aI5DCfa/wGOMnOCODW22KJ6S+IatstRu+K300GhU",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "user5@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-03T13:40:34.542Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 7,
+    "fields": {
+      "password": "argon2$argon2id$v=19$m=102400,t=2,p=8$c3lCcXBmeE1acWg0bTZQSFB1aDRVUA$aHUDgCSa1kMxyq2h0/H4UK1ihpPno4L5xLX5solJ93g",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "user6@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-05-03T13:40:38.891Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 1,
+    "fields": {
+      "organizer": 2,
+      "title": "Event 1",
+      "description": "string",
+      "date": "2024-05-03",
+      "created_at": "2024-05-03T13:42:07.751Z",
+      "updated_at": "2024-05-03T13:43:32.358Z",
+      "users": [
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 2,
+    "fields": {
+      "organizer": 2,
+      "title": "Event 2",
+      "description": "string",
+      "date": "2024-05-10",
+      "created_at": "2024-05-03T13:42:18.607Z",
+      "updated_at": "2024-05-03T13:43:38.522Z",
+      "users": [
+        3,
+        7
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+      "organizer": 2,
+      "title": "Event 3",
+      "description": "string",
+      "date": "2024-05-10",
+      "created_at": "2024-05-03T13:42:24.548Z",
+      "updated_at": "2024-05-03T13:42:24.548Z",
+      "users": []
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 4,
+    "fields": {
+      "organizer": 3,
+      "title": "Event user2",
+      "description": "gergerger",
+      "date": "2024-05-03",
+      "created_at": "2024-05-03T13:44:04.177Z",
+      "updated_at": "2024-05-03T13:44:04.177Z",
+      "users": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "model": "events.event",
+    "pk": 5,
+    "fields": {
+      "organizer": 7,
+      "title": "Event user 6",
+      "description": "rg4grerge",
+      "date": "2024-06-06",
+      "created_at": "2024-05-03T13:44:34.458Z",
+      "updated_at": "2024-05-03T13:44:34.458Z",
+      "users": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  }
+]
