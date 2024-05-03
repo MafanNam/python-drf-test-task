@@ -6,7 +6,7 @@ This is the repository for python-drf-test-task, which performs all the tasks fr
 
 ### Diagram DB
 
-![Diagram](https://github.com/MafanNam/python-drf-test-task/dev-0.0.1/screanshots/diagramDB.svg)
+![Diagram](https://github.com/MafanNam/python-drf-test-task/blob/dev-0.0.1/screanshots/diagramDB.svg)
 
 ## Description
 
