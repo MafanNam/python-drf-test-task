@@ -2,11 +2,11 @@
 
 This is the repository for python-drf-test-task, which performs all the tasks from the ToR and additional ones.
 
-![title](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/1.gif)
+![title](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/1.gif?token=GHSAT0AAAAAACBZW4DNBYSKWQAOLQANFMHQZRU7OLQ)
 
 ### Diagram DB
 
-![Diagram](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/diagram.pdf)
+![Diagram](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/diagramDB.svg)
 
 ## Description
 
@@ -116,12 +116,12 @@ $ cd backend & coverage html
 
 The API documentation is not available [localhost:8000](http://localhost:8000).
 
-![endpoint](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/2.gif)
-![endpoint](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/3.gif)
+![endpoint2](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/2.gif?token=GHSAT0AAAAAACBZW4DN7O5CYRE4MT5DJETQZRU7N4A)
+![endpoint3](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/3.gif?token=GHSAT0AAAAAACBZW4DMCF6ZQ3CGKUTZGTLKZRU7PYA)
 
 ### Admin
 
-![admin](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/4.gif)
+![admin](https://raw.githubusercontent.com/MafanNam/python-drf-test-task/main/screanshots/4.gif?token=GHSAT0AAAAAACBZW4DNHBA6XHYFGCB7E5MSZRU7NMA)
 
 ## Author
 
