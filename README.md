@@ -40,6 +40,7 @@ To run this API, you'll need:
 - Python 3.11
 - Django
 - Django REST Framework
+- Docker (optional)
 - and other dependencies listed in the `requirements` folder
 
 ## Getting Started local
