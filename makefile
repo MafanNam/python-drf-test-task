@@ -17,12 +17,6 @@ show-logs:
 show-logs-api:
 	docker compose -f local.yml logs server
 
-#makemigrations:
-#	docker compose -f local.yml run --rm server python manage.py makemigrations
-#
-#migrate:
-#	docker compose -f local.yml run --rm server python manage.py migrate
-
 collectstatic:
 	docker compose -f local.yml run --rm server python manage.py collectstatic --no-input --clear
 
@@ -35,14 +29,27 @@ makemigrations:
 migrate:
 	cd backend & python manage.py migrate
 
+makemigrations-docker:
+	docker compose -f local.yml run --rm server python manage.py makemigrations
+
+migrate-docker:
+	docker compose -f local.yml run --rm server python manage.py migrate
+
 down-v:
 	docker compose -f local.yml down -v
 
-cov:
-	docker compose -f local.yml run --rm server pytest -p no:warnings --cov=. -v
-
-cov-gen:
-	docker compose -f local.yml run --rm server pytest -p no:warnings --cov=. --cov-report html
-
 tests:
-	docker compose -f local.yml run --rm server pytest
+	cd backend & python manage.py test
+cov:
+	cd backend & coverage run --source='.' manage.py test
+cov-gen:
+	cd backend & coverage html
+
+cov-docker:
+	docker compose -f local.yml run --rm server coverage run --source='.' manage.py test
+
+cov-gen-docker:
+	docker compose -f local.yml run --rm server coverage html
+
+tests-docker:
+	docker compose -f local.yml run --rm server python manage.py test

@@ -10,15 +10,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - CHANGELOG.md file.
+- Cache cachalot, with backend RedisCache.
 - Forms for user.
 - Pre-commit and settings linters for clean code.
 - makefile and commands.
 - drf base token auth.
-- docker and docker compose (django, redis, celery, flower)
-- Events app create
+- docker and docker compose (django, redis, celery, flower).
+- Events app create.
 - Event model, serializer, views, urls.
-- Organize permission object
-- Events (CRUD)
+- Organize permission object.
+- Events (CRUD).
+- Send email when user register on event.
+- Test coverage
 
 ### Changed
 
