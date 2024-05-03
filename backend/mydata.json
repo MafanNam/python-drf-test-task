@@ -112,6 +112,7 @@
       "title": "Event 1",
       "description": "string",
       "date": "2024-05-03",
+      "location": "Kiev, Ukraine",
       "created_at": "2024-05-03T13:42:07.751Z",
       "updated_at": "2024-05-03T13:43:32.358Z",
       "users": [
@@ -129,6 +130,7 @@
       "title": "Event 2",
       "description": "string",
       "date": "2024-05-10",
+      "location": "Kiev, Ukraine",
       "created_at": "2024-05-03T13:42:18.607Z",
       "updated_at": "2024-05-03T13:43:38.522Z",
       "users": [
@@ -145,6 +147,7 @@
       "title": "Event 3",
       "description": "string",
       "date": "2024-05-10",
+      "location": "Kiev, Ukraine",
       "created_at": "2024-05-03T13:42:24.548Z",
       "updated_at": "2024-05-03T13:42:24.548Z",
       "users": []
@@ -158,6 +161,7 @@
       "title": "Event user2",
       "description": "gergerger",
       "date": "2024-05-03",
+      "location": "Kiev, Ukraine",
       "created_at": "2024-05-03T13:44:04.177Z",
       "updated_at": "2024-05-03T13:44:04.177Z",
       "users": [
@@ -174,6 +178,7 @@
       "title": "Event user 6",
       "description": "rg4grerge",
       "date": "2024-06-06",
+      "location": "Kiev, Ukraine",
       "created_at": "2024-05-03T13:44:34.458Z",
       "updated_at": "2024-05-03T13:44:34.458Z",
       "users": [
