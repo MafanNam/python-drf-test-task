@@ -64,7 +64,6 @@ local_settings.py
 db.sqlite3
 db.sqlite3new
 db.sqlite3-journal
-mydata.json
 media/
 media_files/
 backend/mediafiles/*
@@ -119,6 +118,7 @@ myenv
 .envs/*
 !.envs/.local/
 .envs/.local/django.env
+.envs/.local/django.docker.env
 
 requirements/*
 !requirements/base.txt

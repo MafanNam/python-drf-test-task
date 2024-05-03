@@ -1,12 +1,13 @@
 import os
 from pathlib import Path
+
 import environ
 
 env = environ.Env()
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+# Take environment variables from .env file for local
 environ.Env.read_env(os.path.join(BASE_DIR, "..", ".envs", ".local", "django.env"))
 
 APP_DIR = BASE_DIR / "apps"
@@ -27,7 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # THIRD_PARTY_APPS
     "rest_framework",
-    'rest_framework.authtoken',
+    "rest_framework.authtoken",
     "django_celery_results",
     "django_filters",
     "djcelery_email",
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     # LOCAL_APPS
     "apps.users",
+    "apps.events",
 ]
 
 MIDDLEWARE = [
@@ -169,47 +171,30 @@ SPECTACULAR_SETTINGS = {
 }
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        'rest_framework.authentication.TokenAuthentication',
-    ),
+    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework.authentication.TokenAuthentication",),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
-
 DJOSER = {
     "LOGIN_FIELD": "email",
-    "SET_USERNAME_RETYPE": True,
-    "SET_PASSWORD_RETYPE": True,
     "SEND_ACTIVATION_EMAIL": True,
     "SEND_CONFORMATION_EMAIL": True,
-    "LOGOUT_ON_PASSWORD_CHANGE": False,
-    "USER_CREATE_PASSWORD_RETYPE": True,
-    "USERNAME_CHANGED_EMAIL_CONFIRMATION": True,
-    "PASSWORD_CHANGED_EMAIL_CONFIRMATION": True,
     "PASSWORD_RESET_CONFIRM_URL": "password-reset/{uid}/{token}",
     "USERNAME_RESET_CONFIRM_URL": "email-reset/{uid}/{token}",
     "ACTIVATION_URL": "activate/{uid}/{token}",
-    # "SERIALIZERS": {
-    #     "user_create_password_retype": "apps.users.api.serializers.CustomUserCreatePasswordRetypeSerializer",
-    #     "user": "apps.users.api.serializers.CustomUserSerializer",
-    #     "current_user": "apps.users.api.serializers.CustomUserSerializer",
-    #     "user_delete": "djoser.serializers.UserDeleteSerializer",
-    # },
     "PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND": True,
     "USERNAME_RESET_SHOW_EMAIL_NOT_FOUND": True,
-    "TOKEN_MODEL": None,
 }
 
-# CACHE
+# CACHE FOR DEBUG
 # CACHES = {
 #     "default": {
 #         "BACKEND": "django.core.cache.backends.dummy.DummyCache",
 #     }
 # }
 
+# CACHE
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
