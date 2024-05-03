@@ -65,6 +65,12 @@ $ python manage.py loaddata mydata.json
 $ python manage.py runserver
 ```
 
+#### About fixtures(mydata.json)
+
+all user email in [mydata.json](backend/mydata.json) and `password=Pass12345`
+
+for admin user `email=admin@gmail.com` and `password=1`
+
 ### If you want the api to send messages to mail
 
 Then you MUST create and config `django.env` optional `django.docker.env`.
