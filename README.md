@@ -53,18 +53,32 @@ $ cd python-drf-test-task
 
 $ virtualenv venv
 $ source venv/bin/activate
+$ # or windows
+$ .\venv\Scripts\activate
+
 $ pip install -r requirements/local.txt
 
 $ cd backend/
 $ python manage.py migrate
+$ python manage.py loaddata mydata.json
 $ python manage.py runserver
 ```
 
-You can now access the API in your browser at http://127.0.0.1:8000/.
+### If you want the api to send messages to mail
+
+Then you MUST create and config `django.env` optional `django.docker.env`.
+
+For example were create `django.example.env` optional `django.docker.example.env`
+
+All these files are in [.envs/.local/](.envs/.local/)
+
+You can now access the API in your browser at http://localhost:8000/.
 
 ## Getting Started with Docker
 
 Commands can be run through a makefile or written manually.
+
+You can now access the API in your browser at http://localhost:8000/. Flower http://localhost:5555/
 
 ### To build and raise a container, you just need to run it:
 
@@ -98,6 +112,8 @@ $ make down
 
 For testing and generate coverage
 
+![cov tests](https://github.com/MafanNam/python-drf-test-task/blob/dev-0.0.1/screanshots/test_cov.png)
+
 #### makefile
 
 ```bash
@@ -122,7 +138,6 @@ The API documentation is not available [localhost:8000](http://localhost:8000).
 ### Admin
 
 ![admin](https://github.com/MafanNam/python-drf-test-task/blob/dev-0.0.1/screanshots/4.gif)
-
 
 ## Author
 
