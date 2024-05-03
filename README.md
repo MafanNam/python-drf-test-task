@@ -41,18 +41,25 @@ To run this API, you'll need:
 - Django
 - Django REST Framework
 - Docker (optional)
+- Redis, Celery
 - and other dependencies listed in the `requirements` folder
 
 ## Getting Started local
 
 Setup project environment with [virtualenv](https://virtualenv.pypa.io) and [pip](https://pip.pypa.io).
 
+For start server and aplay migrations you have must install Redis on your local machine.
+
+You can download redis from official site [here](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/)
+
+
 ```bash
 $ git clone https://github.com/MafanNam/python-drf-test-task.git
 
 $ cd python-drf-test-task
 
-$ virtualenv venv
+$ pip install virtualenv
+$ python -m virtualenv venv
 $ source venv/bin/activate
 $ # or windows
 $ .\venv\Scripts\activate
