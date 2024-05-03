@@ -123,6 +123,7 @@ The API documentation is not available [localhost:8000](http://localhost:8000).
 
 ![admin](https://github.com/MafanNam/python-drf-test-task/blob/dev-0.0.1/screanshots/4.gif)
 
+
 ## Author
 
 This project is developed by Mafan.
