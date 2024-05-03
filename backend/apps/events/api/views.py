@@ -1,9 +1,12 @@
 from django.conf import settings
 from django.core.mail import send_mail
+from django_filters import rest_framework as dj_filters
 from rest_framework import generics, permissions, status, views
+from rest_framework.filters import SearchFilter
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 
+from .. import pagination
 from ..models import Event
 from ..permissions import OrganizerRequiredPermission
 from .serializers import EventSerializer
@@ -15,8 +18,12 @@ class EventListCreateAPIView(generics.ListCreateAPIView):
     Only the organizer can create events.
     """
 
-    queryset = Event.objects.all()
+    queryset = Event.objects.select_related("organizer").prefetch_related("users").all()
     serializer_class = EventSerializer
+    pagination_class = pagination.StandardResultsSetPagination
+    filter_backends = [dj_filters.DjangoFilterBackend, SearchFilter]
+    filterset_fields = ["organizer", "users", "date"]
+    search_fields = ["title"]
 
     def get_permissions(self):
         if self.request.method == "GET":

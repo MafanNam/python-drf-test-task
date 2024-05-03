@@ -37,19 +37,13 @@ migrate-docker:
 
 down-v:
 	docker compose -f local.yml down -v
-
-tests:
-	cd backend & python manage.py test
 cov:
-	cd backend & coverage run --source='.' manage.py test
+	cd backend & coverage run --source='.' --omit='*/migrations/*.py,*/asgi.py,*/wsgi.py,*/manage.py' manage.py test
 cov-gen:
 	cd backend & coverage html
 
 cov-docker:
-	docker compose -f local.yml run --rm server coverage run --source='.' manage.py test
+	docker compose -f local.yml run --rm server coverage run --source='.' --omit='*/migrations/*.py,*/asgi.py,*/wsgi.py,*/manage.py' manage.py test
 
 cov-gen-docker:
 	docker compose -f local.yml run --rm server coverage html
-
-tests-docker:
-	docker compose -f local.yml run --rm server python manage.py test

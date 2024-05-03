@@ -22,12 +22,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Events (CRUD).
 - Send email when user register on event.
 - Test coverage
+- Test models for users and events
+- Test views for events
+- Pagination, filter and search for event list
 
 ### Changed
 
 - admin.py, add functions for admin panel.
+- add app_name for all urls.py
 
 ### Fixed
 
 - djoser settings.
--
+- many minor fix
